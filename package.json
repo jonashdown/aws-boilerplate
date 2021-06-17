@@ -1,0 +1,45 @@
+{
+  "name": "@wakelet/aws-boiler-plate",
+  "version": "2.0.2",
+  "description": "See readme",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/Wakelet/npm_repo.git",
+    "directory": "packages/aws-boiler-plate"
+  },
+  "scripts": {
+    "test": "npx mocha --recursive --parallel './test/**/*.js'",
+    "lint": "npx eslint **/*.js --ext js",
+    "lint:fix": "npx eslint **/*.js --ext js --fix",
+    "preinstall": "npm prune",
+    "postinstall": "npm dedupe"
+  },
+  "keywords": [
+    "Logger"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "mocha": "^8.0.1",
+    "prettier": "^2.2.1",
+    "rewire": "^5.0.0",
+    "sinon": "^9.2.3",
+    "sinon-chai": "^3.5.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-kinesis": "^3.2.0",
+    "@aws-sdk/util-dynamodb": "^3.2.0",
+    "nanoid": "^3.1.20"
+  }
+}

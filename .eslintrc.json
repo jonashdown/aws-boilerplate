@@ -1,0 +1,10 @@
+{
+  "extends": ["prettier", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "mocha": true,
+    "es6": true
+  }
+}
